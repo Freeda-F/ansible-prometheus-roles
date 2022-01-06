@@ -1,38 +1,30 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This is a role for installing and configuring Grafana.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+To install Grafana in Amazon-linux instance, we will be using a custom grafana repository - [grafana.repo](https://github.com/Freeda-F/ansible-prometheus-roles/tree/main/roles/grafana/files)
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The varuables used are :
+```
+monitor_ip: "65.2.149.51"  #---------grafana server IP---------#
+grafana_user: admin  #---------grafana username---------#
+grafana_password: admin123  #---------grafana password---------#
+```
 
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: monitor
       roles:
-         - { role: username.rolename, x: 42 }
+         - grafana
 
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
