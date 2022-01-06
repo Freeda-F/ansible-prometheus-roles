@@ -1,0 +1,6 @@
+---
+prometheus_url: "https://github.com/prometheus/prometheus/releases/download/v2.32.1/prometheus-2.32.1.linux-amd64.tar.gz"
+version_prom: "2.32.1.linux-amd64"
+node_ip1: "3.110.147.219"
+node_ip2: "13.232.225.117"
+monitor_ip: "65.2.149.51"

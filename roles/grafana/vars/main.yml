@@ -1,0 +1,4 @@
+---
+monitor_ip: "65.2.149.51"
+grafana_user: admin
+grafana_password: admin123
