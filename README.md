@@ -49,9 +49,33 @@ grafana_password: admin123 ## grafana password
 
 ## Provisioning
 
+1. Initially, create 3 roles - prometheus, node-exporter and grafana in the roles_path using the below command
+```
+ansible-galaxy init node-exporter
+ansible-galaxy init prometheus
+ansible-galaxy init grafana
+```
+
+2. Get the contents of the roles - prometheus, node-exporter, grafana and place them in location 'roles_path' specified in the ansible config file (ansible.cfg).
+
+3. Then, you can run the playbooks using the command
+```
+ansible-playbook -i hosts install-node-exporter.yml
+ansible-playbook -i hosts install-prometheus-grafana.yml
+```
 
 ## Results
 
+#### Node Exporter
 
+![image](https://user-images.githubusercontent.com/93197553/148275549-0c315fe0-11dc-401e-bd3d-ba7b9cd903f2.png)
+
+#### Prometheus
+
+![image](https://user-images.githubusercontent.com/93197553/148276026-1800c373-247a-4b76-8bb6-ff521d01c7a2.png)
+
+#### Grafana
+
+![image](https://user-images.githubusercontent.com/93197553/148278012-ed9e9373-10ba-486c-b827-4e119eeb81d1.png)
 
 
