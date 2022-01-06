@@ -1,0 +1,7 @@
+---
+- name: "Install and config prometheus and grafana"
+  hosts: monitor
+  become: true
+  roles:
+    - prometheus
+    - grafana
