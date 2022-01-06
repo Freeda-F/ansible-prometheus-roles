@@ -1,38 +1,28 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This is a role for installing and configuring Node expoters in 2 instances.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+To configure and enable the node-exporter, we will be using [node_exporter.service](https://github.com/Freeda-F/ansible-prometheus-roles/tree/main/roles/node-exporter/files)
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+The varuables used are :
+```
+node_url: "https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz" #-----URL to download node exporter -----#
+version_node: "1.3.1.linux-amd64" #-----Node exporter version-----#
+```
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
+    - hosts: nodes
       roles:
-         - { role: username.rolename, x: 42 }
+         - node-exporter
 
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
